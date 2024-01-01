@@ -16,13 +16,13 @@ Tony Magrady - Berkeley Full-Stack Web Development Bootcamp student, Fall-Winter
 
 ## Description
 
-This is the back end for an E-Commerce website. An Express.js app framework was provided, and the API routes within needed to be developed. The front end has not yet been created; functionality is demonstrated using Postman API tool. Operating in Node.js environment, Sequelize models were created to construct and synchronize with a MySQL database.
-The E-Commerce site product data is organized by category, but also stores one or many "hash tags^" or "labels" that can be associated with the product (in "tag" table). Tagging functionality is common in E-Commerce sites and social media apps.
-^ - Not literally hash tags "#".
+This is the back end for an E-Commerce website. An Express.js app framework was provided, and the API routes within needed to be developed. The front end has not yet been created; functionality is demonstrated using Postman API tool. Operating in Node.js environment, Sequelize models were created to construct and synchronize with a MySQL database. <br>
+The E-Commerce site product data is organized by category, but also stores one or many "hash tags^" or "labels" that can be associated with the product (in "tag" table). Tagging functionality is common in E-Commerce sites and social media apps. <br>
+( ^ - Not literally hash tags "#". )
 
 ## Installation
 
-Installed apps include Node.js (Javascript runtime), Express (web app framework), Mysql2 (database access), Sequelize (Object-relational mapping, ORM, of code to MySQL), and Dotenv (manages private environment variables for use in code).
+Installed apps include Node.js (Javascript runtime), Express (web app framework), Mysql2 (database access), Sequelize (Object-relational mapping, ORM, of code to MySQL), and Dotenv (manages private environment variables for use in code). <br>
 Used Postman local application to test and demostrate API calls.
 
 ## Usage
