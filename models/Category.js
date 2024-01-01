@@ -23,6 +23,8 @@ Category.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
+    onDelete: 'cascade',
+    hooks: true,
     modelName: 'category',
   }
 );

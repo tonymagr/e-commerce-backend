@@ -8,11 +8,14 @@ router.get('/', async (req, res) => {
   // be sure to include its associated Product data
   try {
     const tagData = await Tag.findAll({
-      include: [{ model: Product }, {model: ProductTag}],
+      // include: [{ model: Product }, {model: ProductTag}],
+      // include: { model: Product },
+      include: Product,
     });
     // Send successful response (default 200) to client with JSON data
     res.json(tagData);
   } catch (err) {
+    // next(err);
     res.status(500).json(err);
   }
 });
@@ -22,7 +25,7 @@ router.get('/:id', async (req, res) => {
   // be sure to include its associated Product data
   try {
     const tagData = await Tag.findByPk(req.params.id, {
-      include: [{ model: Product }, {model: ProductTag}],
+      include: Product,
     });
 
     if (!tagData) {
@@ -58,7 +61,7 @@ router.put('/:id', async (req, res) => {
         id: req.params.id,
       },
     });
-    // Send successful response (default 200) to client with JSON data
+    // Send successful response (default 200) to client with JSON data (Count of rows updated)
     res.json(updTagData);
   } catch (error) {
     res.status(500).json(error);

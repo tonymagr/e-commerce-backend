@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
   // be sure to include its associated Products
   try {
     const catData = await Category.findAll({
-      include: [{ model: Product }],
+      include: Product,
     });
     // Send successful response (default 200) to client with JSON data
     res.json(catData);
@@ -22,7 +22,7 @@ router.get('/:id', async (req, res) => {
   // be sure to include its associated Products
   try {
     const catData = await Category.findByPk(req.params.id, {
-      include: [{ model: Product }],
+      include: Product,
     });
 
     if (!catData) {
@@ -58,7 +58,7 @@ router.put('/:id', async (req, res) => {
         id: req.params.id,
       },
     });
-    // Send successful response (default 200) to client with JSON data
+    // Send successful response (default 200) to client with JSON data (Count of rows updated)
     res.json(updCatData);
   } catch (error) {
     res.status(500).json(error);
